@@ -1,0 +1,19 @@
+.curosr{
+    cursor: pointer;
+}
+.jumbo{
+    background: none;
+    color: ivory
+}
+.nav-color{
+    color: ivory
+}
+.incoming-red{
+    color: red;
+}
+.outgoing-yellow{
+    color: yellow
+}
+.incoming-green{
+    color: green
+}

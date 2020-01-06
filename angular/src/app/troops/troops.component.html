@@ -1,0 +1,87 @@
+<div *ngIf="data">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="row">
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T1:</label>
+        <div class="col-sm-2">
+            <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t1">
+      </div>
+      <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t1}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T2:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t2">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t2}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T3:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t3">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t3}}</label>
+      </div>
+      <br>
+      <div class="row">
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T4:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t4">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t4}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T5:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t5">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t5}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T6:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t6">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t6}}</label>
+      </div>
+      <br>
+      <div class="row">
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T7:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t7">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t7}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T8:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t8">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t8}}</label>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">T9:</label>
+        <div class="col-sm-2">
+          <input type="number" min="1" class="form-control" id="food" placeholder="Troop" name="food" [(ngModel)]="t9">
+        </div>
+        <label class="control-label col-sm-1 col-md-1 col-lg-1" for="email">{{data.t9}}</label>
+      </div>
+      <br>
+      <div class="row">
+        <label class="control-label col-sm-2 col-md-2 col-lg-2" for="email">Attack</label>
+        <div class="col-sm-2">
+          <input type="radio" class="" id="attack" [value]="true" name="attack" [(ngModel)]="defaultChoice">
+        </div>
+        <label class="control-label col-sm-2 col-md-2 col-lg-2" for="email">Reinforcement</label>
+        <div class="col-sm-2">
+          <input type="radio" class="" id="attack" [value]="false" name="attack" [(ngModel)]="defaultChoice">
+        </div>
+        <br>
+        <div class="col-sm-4">
+
+        </div>
+        <br>
+        <div class="row">
+          <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Troops to Be Sent To</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="name" placeholder="PlayerName" name="food" [(ngModel)]="PlayerName1">
+          </div>
+        </div>
+        <!--<mat-radio-group>
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group> -->
+      </div>
+      <br>
+      <button type="button" class="col-sm-offset-2 col-lg-offset-2 col-md-offset-2 btn btn-info" (click)='assign()'>Send</button>
+    </div>
+  </form>
+</div>

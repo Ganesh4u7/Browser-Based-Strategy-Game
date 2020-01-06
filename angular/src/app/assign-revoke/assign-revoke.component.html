@@ -1,0 +1,31 @@
+<!--<app-navbar></app-navbar>-->
+<div class=""> 
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Player Name:</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="food" placeholder="Enter Name" name="food" [(ngModel)]="assignName">
+      </div>
+      <label class="control-label col-sm-2" for="email">InWood:</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control" id="food" placeholder="Enter Wood" name="food" [(ngModel)]="assignInWood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-info" (click)='assign()'>Assign</button>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Player Name:</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="food" placeholder="Enter Name" name="food" [(ngModel)]="revokeName">
+      </div>
+      <label class="control-label col-sm-2" for="email">InWood:</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control" id="food" placeholder="Enter Wood" name="food" [(ngModel)]="revokeInWood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-warning" (click)='revoke()'>Revoke</button>
+      </div>
+    </div>
+  </form>
+</div>

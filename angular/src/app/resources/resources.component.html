@@ -1,0 +1,140 @@
+<div class="container" *ngIf="all">
+  <div class="row">
+    <div class="col-sm-3 cursor col-md-offset-1 col-lg-offset-1 col-sm-2 col-md-2 col-lg-2 " (click)="food()">
+      <img src="../../assets/images/crop.png">
+    </div>
+    <div class="col-sm-3 cursor col-md-offset-1 col-lg-offset-1 col-sm-2 col-md-2 col-lg-2 " (click)="wood()">
+      <img src="../../assets/images/wood.png">
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3 cursor col-md-offset-1 col-lg-offset-1 col-sm-2 col-md-2 col-lg-2 " (click)="iron()">
+    <img src="../../assets/images/iron.png">
+  </div>
+  <div class="col-sm-3 cursor col-md-offset-1 col-lg-offset-1 col-sm-2 col-md-2 col-lg-2 " (click)="gold()">
+    <img src="../../assets/images/gold.png">
+  </div>
+</div>
+
+</div>
+
+  <div *ngIf="showWood">
+    <h3>Wood </h3>
+    <h5>Villagers in this Field - {{InWood}}</h5>
+    <h5>  Current PRoduction - {{CurrentProduction}}</h5>
+    <h5>Available Villagers - {{AvailableVillagers}}</h5>
+    <div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Add Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="assignForWood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-info" (click)='assignWood()'>Add Villager</button>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Remove Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="removeForWood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-warning" (click)='removeWood()'>Remove Villager</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)='resources()'>Back To Resources</button>
+  </form>
+</div>
+  </div>
+
+  <div *ngIf="showFood">
+    <h3>Food</h3>
+    <h5>Villagers in this Field - {{inFood}}</h5>
+    <h5>  Current PRoduction - {{foodCurrentProduction}}</h5>
+    <h5>Available Villagers - {{foodVillagers}}</h5>
+    <div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Add Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" min = "1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="assignForFood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-info" (click)='assignFood()'>Add Villager</button>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Remove Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="removeForFood">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-warning" (click)='removeFood()'>Remove Villager</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)='resources()'>Back To Resources</button>
+  </form>
+</div>
+  </div>
+
+  <div *ngIf="showGold">
+    <h3>Gold</h3>
+    <h5>Villagers in this Field - {{inGold}}</h5>
+    <h5>  Current PRoduction - {{goldCurrentProduction}}</h5>
+    <h5>Available Villagers - {{goldVillagers}}</h5>
+    <div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Add Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="assignForGold">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-info" (click)='assignGold()'>Add Villager</button>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Remove Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="removeForGold">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-warning" (click)='removeGold()'>Remove Villager</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)='resources()'>Back To Resources</button>
+  </form>
+</div>
+  </div>
+
+  <div *ngIf="showIron">
+    <h3>Iron</h3>
+    <h5>Villagers in this Field - {{inIron}}</h5>
+    <h5>  Current PRoduction - {{ironCurrentProduction}}</h5>
+    <h5>Available Villagers - {{ironVillagers}}</h5>
+    <div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Add Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager"  [(ngModel)]="assignForIron">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-info" (click)='assignIron()'>Add Villager</button>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3" for="email">Remove Villager</label>
+      <div class="col-sm-2">
+        <input type="number" min="1" class="form-control" id="food" placeholder="Enter Number" name="vilager" [(ngModel)]="removeForIron">
+      </div>
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-warning" (click)='removeIron()'>Remove Villager</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)='resources()'>Back To Resources</button>
+  </form>
+</div>
+  </div>

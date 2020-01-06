@@ -1,0 +1,56 @@
+<div class="" *ngIf="data">
+  <h2>Black Smith</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2 pull-left" for="food">Current Level:{{data.level}}</label>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3 pull-left" for="food">Upgrade TO Next Level:{{data.level + 1}}</label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.Bfood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.Bwood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.Bgold}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.Biron}}</label>
+        <button class="col-sm-offset-1 btn btn-info" (click)="upgradeBlack()">Upgrage</button>
+        </div>
+  </form>
+  <div class="jumbotron">
+    <form class="form-horizontal">
+      <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3 pull-left" for="food"> Infantry &nbsp; &nbsp; &nbsp; &nbsp; Current Level:{{data.Ilvl}} </label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.i1f}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.i1w}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.i1g}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.i1i}}</label>
+        <button class="col-sm-offset-1 btn btn-info" (click)="Infantry()">Upgrage</button>
+        </div>
+  </form>
+  <form class="form-horizontal">
+      <div class="form-group">
+      <label class="control-label col-sm-3 col-md-3 col-lg-3 pull-left" for="food">Cavalry&nbsp; &nbsp;&nbsp; &nbsp;  Current Level:{{data.Clvl}}</label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.c2f}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.c2w}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.c2g}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.c2i}}</label>
+        <button class="col-sm-offset-1 btn btn-info" (click)="Cavalry()">Upgrage</button>
+        </div>
+  </form>
+  <form class="form-horizontal">
+      <div class="form-group">
+      <label class="control-label col-sm-4 col-md-4 col-lg-4 pull-left" for="food">Seige Weapons&nbsp; &nbsp;&nbsp; &nbsp;  Current Level:{{data.SWlvl}}</label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.sw3f}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.sw3w}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.sw3g}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.sw3i}}</label>
+        <button class="col-sm-offset-1 btn btn-info" (click)="Seige()">Upgrage</button>
+        </div>
+  </form>
+  </div>
+</div>

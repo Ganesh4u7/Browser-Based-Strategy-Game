@@ -1,0 +1,37 @@
+<!--<app-navbar></app-navbar>-->
+<div class="" *ngIf="data">
+  <div>
+    <!--countDown -->
+  <h2>Town Center</h2>
+  </div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2 pull-left" for="food">Current Level:{{data.level}}</label>
+      <label class="control-label col-sm-2 pull-left" for="food">Upgrade to Next Level:{{data.level+1}}</label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.Bfood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.Bwood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.Biron}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.Bgold}}</label>
+        <button class="btn btn-info" (click)="upgradeTownCenter()" [disabled]="show">Upgrade</button>
+        </div>
+        <div class="form-group">
+      <label class="control-label col-sm-2 pull-left" for="food">Create Vilager</label>
+          <label class="control-label col-sm-2 pull-left" for="food"> Available Villagers : {{data.Avail}}</label>
+
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.v1f}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.v1w}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.v1i}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.v1g}}</label>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-3">
+        <input type="number" min = "1" class="form-control" id="count" placeholder="count" name="count" [(ngModel)]="count">
+        </div>
+        <button class="btn btn-success" (click)="createVillager()" [disabled]="show">Create</button>
+        </div>
+  </form>
+</div>

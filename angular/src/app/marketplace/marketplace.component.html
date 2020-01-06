@@ -1,0 +1,53 @@
+<!--<app-navbar></app-navbar>-->
+<!--<div class="col-md-8 col-sm-8 col-lg-8">-->
+<div class="">
+  <h2>Market Place</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2 pull-left" for="food">Current Level:{{data.level}}</label>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.Bfood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.Bwood}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.Biron}}</label>
+        <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.Bgold}}</label>
+        <button class="btn btn-info" (click)="market()">Send Resources</button>
+        </div>
+  </form>
+  <h4>SEND RESOURCES</h4>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2 pull-left" for="food">Food:</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" id="food" placeholder="Enter Food" name="food" [(ngModel)]="food">
+      </div>
+      <label class="control-label col-sm-2" for="wood">Wood:</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" id="name" placeholder="Enter Wood" name="name" [(ngModel)]="wood">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="iron">Iron:</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" id="wood" placeholder="Enter Iron" name="wood" [(ngModel)]="iron">
+      </div>
+      <label class="control-label col-sm-2" for="food">Gold:</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" id="name" placeholder="Enter Gold" name="name" [(ngModel)]="gold">
+      </div>
+    </div>
+    <div class="form-group">  
+      <label class="control-label col-sm-2" for="iron">Player Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="iron" placeholder="Enter Player Name" name="iron" [(ngModel)]="name">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-4">
+        <button type="button" class="btn btn-info" (click)='Trade()'>Trade Now</button>
+        <button type="button" class="btn btn-warning" (click)='ClearValues()'>Clear</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--</div>-->

@@ -1,0 +1,82 @@
+<div *ngIf="!isLoggedIn">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="">Roger</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-md-8 col-sm-8 col-lg-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="isLoggedIn">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+      <ul class="nav navbar-nav navbar-right">
+         <li><a  class=""><span class="glyphicon  glyphicon-user"></span>{{name|uppercase}}</a></li>
+        <li><a (click)="logout()" class="curosr"><span class="glyphicon glyphicon-log-out"></span> Logut</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-md-2 col-sm-2 col-lg-2">
+    <div class="jumbotron jumbo">
+      <div class="container">
+        <button class="btn btn-link nav-color" routerLink="/home">Home</button>
+        <button class="btn btn-link nav-color" routerLink="/troops">Troops Management</button>
+        <button class="btn btn-link nav-color" routerLink="/resources">Resources</button>
+        <button class="btn btn-link nav-color" routerLink="/stats">Statistics</button>
+        <!--<button class="btn btn-link nav-color">Short Cuts</button>-->
+        <!--resources-->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-lg-8">
+    <div *ngIf="data">
+      <label class="control-label col-sm-2 pull-left" for="food">Food:{{data.food}}</label>
+      <label class="control-label col-sm-2 pull-left" for="food">Wood:{{data.wood}}</label>
+      <label class="control-label col-sm-2 pull-left" for="food">Gold:{{data.gold}}</label>
+      <label class="control-label col-sm-2 pull-left" for="food">Iron:{{data.iron}}</label>
+    </div>
+    <br>
+    <hr>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-2 col-sm-2 col-lg-2">
+    <div class="jumbotron jumbo">
+      <div class="container" *ngIf="data">
+        <h4>Current Production Per Minute</h4>
+        <h5>Food:{{data.CPFood}}</h5>
+        <h5>Wood:{{data.CPWood}}</h5>
+        <h5>Gold:{{data.CPGold}}</h5>
+        <h5>Iron:{{data.CPIron}}</h5>
+         <div class="incoming-red" *ngIf="data.AttacksIncoming >0">
+        Incoming Attacks:{{data.AttacksIncoming}}
+        <!--RED-->
+        </div>
+        <div  class="outgoing-yellow" *ngIf="data.AttacksOutgoing >0">
+        OutGoing attacks:{{data.AttacksOutgoing}}
+        <!--Yelloe-->
+        </div>
+        <div class="incoming-green" *ngIf="data.IncomingTroops >0">
+        Incoming Troops:{{data.IncomingTroops}}
+        <!--Gree-->
+        </div>
+        <div class="incoming-green"  *ngIf="data.ReinfIncoming >0">
+          <!--Green-->
+       Incoming  Reinforcement:{{data.ReinfIncoming}}
+        </div>
+        <div class="outgoing-yellow"  *ngIf="data.ReinfOutgoing >0">
+          <!--Yellow-->
+        OutGoing Reinforcements:{{data.ReinfOutgoing}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
