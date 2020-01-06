@@ -1,0 +1,9 @@
+body{
+    background-image: url('/assets/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html, body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
